@@ -8,16 +8,20 @@ const Feed = () => {
     // Refer to Hint 2 for more help!
 
     /* Use the map() function to render multiple Blocks! */
-    const posts = null; // TODO: edit this variable
+    const [posts, setPosts] = useState([]); // TODO: edit this variable
 
     return (
         <div>
-            <Menu></Menu>
+            <Menu>handleClick={click}</Menu>
 
             {/* Below is where all of your Blocks should render! */}
             {posts}
         </div>
     );
+
+    function click(color) {
+        return Block(color)
+    }
 }
 
 export default Feed;
